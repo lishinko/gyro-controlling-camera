@@ -1,5 +1,4 @@
-﻿
-//#define TEST_WITH_UI
+﻿//#define TEST_WITH_UI
 #define USE_VELOCITY
 using System.Collections;
 using System.Collections.Generic;
@@ -147,8 +146,9 @@ public class GyroController : MonoBehaviour
         _accuRotation.x = x;
         _accuRotation.y = y;
 
-        SceneCamera.transform.localRotation = Quaternion.Euler(newRotation);
-
+        var intended = Quaternion.Euler(newRotation);
+        var decreasedSpeed = Quaternion.Slerp(SceneCamera.transform.localRotation, intended, SlerpValue);
+        SceneCamera.transform.localRotation = decreasedSpeed;
         //#endif
 
     }

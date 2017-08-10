@@ -753,16 +753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneCamera: {fileID: 0}
-  SlerpValue: 1
-  LeftRight: {x: -4, y: 4}
-  BottomTop: {x: -4, y: 4}
-  StartCam: {fileID: 438485758}
-  Gyro: {fileID: 1969234482}
-  Intended: {fileID: 1982787647}
-  Delta: {fileID: 1600931177}
-  StartGyroInverse: {fileID: 1761376521}
-  Clamped: {fileID: 61440629}
-  Velocity: {fileID: 996701069}
+  SlerpValue: 0.02
+  LeftRight: {x: -7, y: 7}
+  BottomTop: {x: -7, y: 7}
 --- !u!4 &670591673
 Transform:
   m_ObjectHideFlags: 0
